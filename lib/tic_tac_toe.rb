@@ -64,7 +64,7 @@ class TicTacToe
   
   def won?
     WIN_COMBINATIONS.each do |combo|
-      return combo if board[combo[0]] == board[combo[1]] && board[combo[1]] == board[combo[2]] && board[combo[0]] != " "
+      return combo if @board[combo[0]] == @board[combo[1]] && @board[combo[1]] == @board[combo[2]] && @board[combo[0]] != " "
     end
     
     return nil
@@ -84,7 +84,7 @@ class TicTacToe
   
   def winner
     if won? != nil
-      return board[won?[0]]
+      return @board[won?[0]]
     else
       return nil
     end
